@@ -102,7 +102,10 @@ const Admin_Login_Form = () => {
         </button>
         <p className="lg:mt-4 text-center">
           New user?{" "}
-          <a href="/adminsignup" className="text-blue-600 hover:underline">
+          <a
+            href="https://thapar-nexus.netlify.app/adminsignup"
+            className="text-blue-600 hover:underline"
+          >
             Sign Up
           </a>
         </p>
