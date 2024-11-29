@@ -28,7 +28,7 @@ const Admin_Signup_form = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/placement-team/signup",
+        "https://thapar-nexus-backend.onrender.com/api/v1/auth/placement-team/signup",
         {
           name,
           email,

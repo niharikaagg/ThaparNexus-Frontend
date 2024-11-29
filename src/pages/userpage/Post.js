@@ -32,7 +32,7 @@ function Post({
     const checkIfAddedToCalendar = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/v1/student/calendar/check-events/${postId}`
+          `https://thapar-nexus-backend.onrender.com/api/v1/student/calendar/check-events/${postId}`
         );
         setIsAddedToCalendar(response.data.isAddedToCalendar);
       } catch (error) {
@@ -47,7 +47,7 @@ function Post({
   const handleAddToCalendar = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/v1/student/calendar/toggle-events/${postId}`
+        `https://thapar-nexus-backend.onrender.com/api/v1/student/calendar/toggle-events/${postId}`
       );
       setIsAddedToCalendar(!isAddedToCalendar); // Toggle the calendar status after response
       console.log(response.data.message);
@@ -63,7 +63,7 @@ function Post({
   const handleSaveToggle = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/v1/student/posts/save/${postId}`
+        `https://thapar-nexus-backend.onrender.com/api/v1/student/posts/save/${postId}`
       );
       setIsSaved(!isSaved);
       console.log(response.data.message);
@@ -81,7 +81,7 @@ function Post({
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/v1/student/posts/${postId}/query`,
+        `https://thapar-nexus-backend.onrender.com/api/v1/student/posts/${postId}/query`,
         { queryText: newQuery }
       );
 

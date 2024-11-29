@@ -27,7 +27,7 @@ const Admin_Login_Form = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/placement-team/login",
+        "https://thapar-nexus-backend.onrender.com/api/v1/auth/placement-team/login",
         {
           email,
           password,

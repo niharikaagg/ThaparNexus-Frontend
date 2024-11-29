@@ -16,7 +16,7 @@ function AdminNotificationsPage() {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/placement-team/profile"
+          "https://thapar-nexus-backend.onrender.com/api/v1/placement-team/profile"
         );
         setUserData(response.data);
       } catch (error) {
@@ -30,7 +30,7 @@ function AdminNotificationsPage() {
     const fetchNotifications = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/placement-team/notifications"
+          "https://thapar-nexus-backend.onrender.com/api/v1/placement-team/notifications"
         );
         setNotifications(response.data.notifications || []);
         setLoading(false);
@@ -48,7 +48,7 @@ function AdminNotificationsPage() {
 
       // Mark notification as read
       await axios.put(
-        `http://localhost:5000/api/v1/placement-team/notifications/${notification._id}/mark-as-read`
+        `https://thapar-nexus-backend.onrender.com/api/v1/placement-team/notifications/${notification._id}/mark-as-read`
       );
 
       // Navigate to the related post details page

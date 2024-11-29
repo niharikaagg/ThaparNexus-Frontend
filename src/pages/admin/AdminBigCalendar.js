@@ -11,7 +11,7 @@ const BigCalendar = () => {
   const fetchEvents = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/v1/placement-team/calendar/view-events"
+        "https://thapar-nexus-backend.onrender.com/api/v1/placement-team/calendar/view-events"
       );
 
       const eventData = response.data.map((event) => ({

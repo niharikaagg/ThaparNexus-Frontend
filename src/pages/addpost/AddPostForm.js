@@ -39,7 +39,7 @@ function AddPostForm() {
     const fetchDropdownOptions = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/placement-team/homepage-dropdown-options"
+          "https://thapar-nexus-backend.onrender.com/api/v1/placement-team/homepage-dropdown-options"
         );
         setDropdownOptions({
           branches: response.data.branches.map((branch) => ({
@@ -112,7 +112,7 @@ function AddPostForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/placement-team/posts/new-post",
+        "https://thapar-nexus-backend.onrender.com/api/v1/placement-team/posts/new-post",
         filteredFormData
       );
 

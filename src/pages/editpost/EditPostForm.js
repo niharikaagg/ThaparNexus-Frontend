@@ -49,7 +49,7 @@ function EditPostForm() {
     const fetchDropdownOptions = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/placement-team/homepage-dropdown-options"
+          "https://thapar-nexus-backend.onrender.com/api/v1/placement-team/homepage-dropdown-options"
         );
         setDropdownOptions({
           branches: response.data.branches.map((branch) => ({
@@ -75,7 +75,7 @@ function EditPostForm() {
     const fetchPostDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/v1/placement-team/posts/${id}`
+          `https://thapar-nexus-backend.onrender.com/api/v1/placement-team/posts/${id}`
         );
         const post = response.data;
 
@@ -169,7 +169,7 @@ function EditPostForm() {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/v1/placement-team/posts/edit-post/${id}`,
+        `https://thapar-nexus-backend.onrender.com/api/v1/placement-team/posts/edit-post/${id}`,
         filteredFormData
       );
 

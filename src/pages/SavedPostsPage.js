@@ -21,7 +21,7 @@ function SavedPostsPage() {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/student/profile"
+          "https://thapar-nexus-backend.onrender.com/api/v1/student/profile"
         );
         setUserData(response.data); // Set user data from profile endpoint
       } catch (error) {
@@ -36,7 +36,7 @@ function SavedPostsPage() {
     const fetchSavedPosts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/student/posts/saved"
+          "https://thapar-nexus-backend.onrender.com/api/v1/student/posts/saved"
         ); // Adjust the endpoint as needed
         setSavedPosts(response.data.savedPosts || []); // Set only saved posts
         setLoading(false); // Set loading to false after data is fetched

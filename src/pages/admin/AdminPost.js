@@ -30,7 +30,7 @@
 //   const handleDeletePost = async () => {
 //     try {
 //       const response = await axios.delete(
-//         `http://localhost:5000/api/v1/placement-team/posts/${postId}`
+//         `https://thapar-nexus-backend.onrender.com/api/v1/placement-team/posts/${postId}`
 //       );
 //       console.log(response.data.message);
 //       if (onPostDelete) onPostDelete(postId); // Callback to remove post from view
@@ -48,7 +48,7 @@
 
 //     try {
 //       const response = await axios.post(
-//         `http://localhost:5000/api/v1/placement-team/posts/query/${queryId}/reply`,
+//         `https://thapar-nexus-backend.onrender.com/api/v1/placement-team/posts/query/${queryId}/reply`,
 //         { replyText }
 //       );
 
@@ -245,7 +245,7 @@ function AdminPost({
   const handleDeletePost = async () => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/v1/placement-team/posts/${postId}`
+        `https://thapar-nexus-backend.onrender.com/api/v1/placement-team/posts/${postId}`
       );
       console.log(response.data.message);
       if (onPostDelete) onPostDelete(postId); // Callback to remove post from view
@@ -263,7 +263,7 @@ function AdminPost({
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/v1/placement-team/posts/query/${queryId}/reply`,
+        `https://thapar-nexus-backend.onrender.com/api/v1/placement-team/posts/query/${queryId}/reply`,
         { replyText }
       );
 

@@ -13,7 +13,7 @@ const BigCalendar = () => {
   const fetchEvents = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/v1/student/calendar/view-events"
+        "https://thapar-nexus-backend.onrender.com/api/v1/student/calendar/view-events"
       );
       const eventData = response.data.map((event) => ({
         id: event._id,
@@ -32,7 +32,7 @@ const BigCalendar = () => {
   const deleteEvent = async (eventId) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/v1/student/calendar/delete-event/${eventId}`
+        `https://thapar-nexus-backend.onrender.com/api/v1/student/calendar/delete-event/${eventId}`
       );
       fetchEvents();
     } catch (error) {

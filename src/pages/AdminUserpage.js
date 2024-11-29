@@ -30,7 +30,7 @@ function AdminUserpage() {
     const fetchDropdownOptions = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/placement-team/homepage-dropdown-options"
+          "https://thapar-nexus-backend.onrender.com/api/v1/placement-team/homepage-dropdown-options"
         );
         setDropdownOptions({
           branches: response.data.branches,
@@ -56,7 +56,7 @@ function AdminUserpage() {
       });
 
       const response = await axios.get(
-        `http://localhost:5000/api/v1/placement-team/posts?${params.toString()}`
+        `https://thapar-nexus-backend.onrender.com/api/v1/placement-team/posts?${params.toString()}`
       );
       setSearchResults(response.data);
     } catch (error) {
@@ -68,7 +68,7 @@ function AdminUserpage() {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/placement-team/profile"
+          "https://thapar-nexus-backend.onrender.com/api/v1/placement-team/profile"
         );
         setUserData(response.data);
 

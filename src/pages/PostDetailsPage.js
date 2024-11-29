@@ -20,7 +20,7 @@ function PostDetailsPage() {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/student/profile"
+          "https://thapar-nexus-backend.onrender.com/api/v1/student/profile"
         );
         setUserData(response.data);
       } catch (error) {
@@ -34,7 +34,7 @@ function PostDetailsPage() {
     const fetchPost = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/v1/student/posts/${postId}`
+          `https://thapar-nexus-backend.onrender.com/api/v1/student/posts/${postId}`
         );
         setPost(response.data);
       } catch (error) {

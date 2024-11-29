@@ -16,7 +16,7 @@ function AdminMyPostsPage() {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/placement-team/profile"
+          "https://thapar-nexus-backend.onrender.com/api/v1/placement-team/profile"
         );
         setUserData(response.data);
 
@@ -32,7 +32,7 @@ function AdminMyPostsPage() {
   const fetchPosts = async (placementTeamMemberId) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/v1/placement-team/posts/my-posts?author=${placementTeamMemberId}`
+        `https://thapar-nexus-backend.onrender.com/api/v1/placement-team/posts/my-posts?author=${placementTeamMemberId}`
       );
       setSearchResults(response.data);
     } catch (error) {

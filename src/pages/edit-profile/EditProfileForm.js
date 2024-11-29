@@ -26,7 +26,7 @@ function EditProfileForm() {
     const fetchStudentData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/student/profile"
+          "https://thapar-nexus-backend.onrender.com/api/v1/student/profile"
         );
         setFormData(response.data);
       } catch (error) {
@@ -49,7 +49,7 @@ function EditProfileForm() {
     const fetchDropdownOptions = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/student/homepage-dropdown-options"
+          "https://thapar-nexus-backend.onrender.com/api/v1/student/homepage-dropdown-options"
         );
         setDropdownOptions(response.data);
       } catch (error) {
@@ -65,7 +65,7 @@ function EditProfileForm() {
 
     try {
       const response = await axios.put(
-        "http://localhost:5000/api/v1/student/profile",
+        "https://thapar-nexus-backend.onrender.com/api/v1/student/profile",
         formData
       );
       setLoading(false);

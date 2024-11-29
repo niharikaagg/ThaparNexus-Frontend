@@ -14,7 +14,9 @@ const LeftSec = ({ name, rollno, year }) => {
   const handleLogout = async () => {
     try {
       // Call logout API to clear the session
-      await axios.post("http://localhost:5000/api/v1/auth/student/logout");
+      await axios.post(
+        "https://thapar-nexus-backend.onrender.com/api/v1/auth/student/logout"
+      );
       // Navigate to the home page after successful logout
       navigate("/");
     } catch (error) {

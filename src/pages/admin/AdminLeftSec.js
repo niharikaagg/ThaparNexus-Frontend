@@ -15,7 +15,7 @@ const AdminLeftSec = ({ name }) => {
     try {
       // Call logout API to clear the session
       await axios.post(
-        "http://localhost:5000/api/v1/auth/placement-team/logout"
+        "https://thapar-nexus-backend.onrender.com/api/v1/auth/placement-team/logout"
       );
       // Navigate to the home page after successful logout
       navigate("/");

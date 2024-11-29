@@ -32,7 +32,7 @@ function Userpage() {
     const fetchDropdownOptions = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/student/homepage-dropdown-options"
+          "https://thapar-nexus-backend.onrender.com/api/v1/student/homepage-dropdown-options"
         );
         setDropdownOptions({
           branches: response.data.branches,
@@ -58,7 +58,7 @@ function Userpage() {
       });
 
       const response = await axios.get(
-        `http://localhost:5000/api/v1/student/posts?${params.toString()}`
+        `https://thapar-nexus-backend.onrender.com/api/v1/student/posts?${params.toString()}`
       );
       setSearchResults(response.data);
     } catch (error) {
@@ -70,7 +70,7 @@ function Userpage() {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/student/profile"
+          "https://thapar-nexus-backend.onrender.com/api/v1/student/profile"
         );
         setUserData(response.data);
 

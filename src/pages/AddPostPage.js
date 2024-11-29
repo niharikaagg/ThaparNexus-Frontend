@@ -12,7 +12,7 @@ const AddPostPage = () => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/placement-team/profile"
+          "https://thapar-nexus-backend.onrender.com/api/v1/placement-team/profile"
         );
         setUserData(response.data);
       } catch (error) {

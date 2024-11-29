@@ -20,7 +20,7 @@ function NotificationsPage() {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/student/profile"
+          "https://thapar-nexus-backend.onrender.com/api/v1/student/profile"
         );
         setUserData(response.data);
       } catch (error) {
@@ -34,7 +34,7 @@ function NotificationsPage() {
     const fetchNotifications = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/student/notifications"
+          "https://thapar-nexus-backend.onrender.com/api/v1/student/notifications"
         );
         setNotifications(response.data.notifications || []);
         setLoading(false);
@@ -52,7 +52,7 @@ function NotificationsPage() {
 
       // Mark notification as read
       await axios.put(
-        `http://localhost:5000/api/v1/student/notifications/${notification._id}/mark-as-read`
+        `https://thapar-nexus-backend.onrender.com/api/v1/student/notifications/${notification._id}/mark-as-read`
       );
 
       // Navigate to the related post details page
